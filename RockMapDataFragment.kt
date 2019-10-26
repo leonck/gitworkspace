@@ -29,7 +29,7 @@ import java.lang.ref.WeakReference
 /**
  *  @author Leon
  *  @time 2017/7/19  18:23
- *  @describe  地图 定位
+ *  @describe  12334
  */
 class RockMapDataFragment : Fragment() {
     internal var view: View? = null
@@ -37,9 +37,9 @@ class RockMapDataFragment : Fragment() {
 
     private var drone: HubsanDrone? = null
     private lateinit var app: HubsanDroneApplication
-    private var mondStatus: Boolean = false  //在航点 跟随环绕模式下 右上角摇杆栏不显示
+    private var mondStatus: Boolean = false  //在航�?跟随环绕模式�?右上角摇杆栏不显�?
     /**
-     * 弹窗模式操作框
+     * 弹窗模式操作�?
      */
     private var isFullScreen = false
     /**
@@ -51,7 +51,7 @@ class RockMapDataFragment : Fragment() {
 
     interface RockMapDataListener {
         fun editorToolChanged(tool: Common.EditorTools)
-        fun maptype(type: Int) //1普通 2 卫星 3夜间
+        fun maptype(type: Int) //1普�?2 卫星 3夜间
         fun findLocationClick(type: Int) //我的位置 2飞机位置
         fun toSettingCamera()
     }
@@ -108,10 +108,10 @@ class RockMapDataFragment : Fragment() {
             //校准
             setTool(Common.EditorTools.NONE)
             if (drone?.airMode?.getMotorStatus() == 3) {
-                //设置里设置可校准地图打开 则一直可以校准
+                //设置里设置可校准地图打开 则一直可以校�?
                 val longpresstocalibration = PreferenceUtils.getPrefBoolean(activity, Constants.SETTING_MAP_CALIBRATION_OPEN_CLOSE_207s, false)
                 if (!longpresstocalibration) {
-                    val isCalibration = PreferenceUtils.getPrefBoolean(HubsanApplication.getApplication(), Constants.ISCALIBRATION207s, false)// 判断校准是否处于选中状态
+                    val isCalibration = PreferenceUtils.getPrefBoolean(HubsanApplication.getApplication(), Constants.ISCALIBRATION207s, false)// 判断校准是否处于选中状�?
                     if (isCalibration) {
                         setTopMapCalibration(false)
                     } else {
@@ -191,7 +191,7 @@ class RockMapDataFragment : Fragment() {
     }
 
     /**
-     * 显示遥感操作栏
+     * 显示遥感操作�?
      */
     fun showRockData(show: Boolean) {
         if (show && (!mondStatus)) {
@@ -212,8 +212,8 @@ class RockMapDataFragment : Fragment() {
     }
 
     /**
-     * 处于模式下 模式操作框弹出隐藏右上角模式 否则显示
-     * 1F模式 2航点编辑模式 3 跟随 4环绕 5航点飞行模式  0x0E：射线模式
+     * 处于模式�?模式操作框弹出隐藏右上角模式 否则显示
+     * 1F模式 2航点编辑模式 3 跟随 4环绕 5航点飞行模式  0x0E：射线模�?
      *
      */
     fun setModeImage(type: Int) {
@@ -242,7 +242,7 @@ class RockMapDataFragment : Fragment() {
                 view?.modeImage?.visibility = View.GONE
                 if (drone?.airMode?.lineModeBean?.status == 1) { //暂停
                     view?.modeText?.text = getString(R.string.h501m_recovery)
-                } else {  //执行中
+                } else {  //执行�?
                     view?.modeText?.text = getString(R.string.h501m_suspend)
                 }
             } else {
@@ -309,7 +309,7 @@ class RockMapDataFragment : Fragment() {
             view?.hubsanHeadImage?.setAlpha(80)
             view?.hubsanHeadImage?.setEnabled(false)
         } else {
-            //可点击
+            //可点�?
             view?.hubsanHeadImage?.setAlpha(255)
             view?.hubsanHeadImage?.setEnabled(true)
         }
