@@ -18,7 +18,8 @@ import java.lang.ref.WeakReference
 /**
  *  @author Leon
  *  @time 2018/8/10  14:05
- *  @describe  1234
+ *  @describe  1234 000
+ *  @describe  34567 000
  */
 class AireAttitudeFragment : Fragment() {
     internal var view: View? = null
