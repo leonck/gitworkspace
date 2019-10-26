@@ -14,7 +14,7 @@ import com.csk.hbsdrone.utils.PreferenceUtils
 import com.csk.hbsdrone.utils.Utils
 import kotlinx.android.synthetic.main.h501m_option_head_data_fragment.view.*
 import java.lang.ref.WeakReference
-
+1111111111111111
 /**
  *  @author Leon
  *  @time 2018/8/10  14:05
